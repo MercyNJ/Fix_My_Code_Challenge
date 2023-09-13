@@ -4,12 +4,13 @@
 class Square:
     """ A square class."""
     
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, *args, **kwargs):
         """Initialization of a square instance"""
-        if width < 0 or height < 0:
-            raise ValueError("Width and height must be non-negative.")
-        self.width = width
-        self.height = height
+        self.width = 0
+        self.height = 0
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
