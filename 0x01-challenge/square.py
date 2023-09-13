@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ A module that defines a class square."""
 
-class Square:
+class Square():
     """ A square class."""
     
     def __init__(self, *args, **kwargs):
