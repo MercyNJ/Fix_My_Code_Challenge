@@ -3,12 +3,11 @@
 
 class Square():
     """ A square class."""
+    width = 0
+    height = 0
     
     def __init__(self, *args, **kwargs):
         """Initialization of a square instance"""
-        self.width = 0
-        self.height = 0
-
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -25,7 +24,7 @@ class Square():
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-
+    """ Create an instance"""
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
