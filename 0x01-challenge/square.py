@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ A module that defines a class square."""
 
+
 class Square():
     """ A square class."""
     width = 0
     height = 0
-    
+
     def __init__(self, *args, **kwargs):
         """Initialization of a square instance"""
         for key, value in kwargs.items():
@@ -22,6 +23,7 @@ class Square():
     def __str__(self):
         """Return str representation of square"""
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
     """ Create an instance"""
